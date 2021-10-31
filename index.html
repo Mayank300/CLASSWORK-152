@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+    <script src="rocket.js"></script>
+  </head>
+
+  <body>
+    <a-scene background="color:#000000">
+      <a-camera position="0 0 5"> </a-camera>
+      <a-entity id="rocket" position="0 0 0" move>
+        <!-- cone / top part -->
+        <a-cone
+          id="cone"
+          position="0 2 0"
+          color="blue"
+          radius-bottom="0.5"
+          radius-top="0.01"
+        >
+        </a-cone>
+        <!-- second part -->
+        <a-cylinder
+          id="cylinder"
+          position="0 -0.02 0"
+          color="red"
+          radius="0.5"
+          height="3"
+        >
+        </a-cylinder>
+        <!-- third part -->
+        <a-cone
+          id="cone"
+          position="0 -1 0"
+          color="blue"
+          radius-bottom="0.8"
+          radius-top="0.3"
+        >
+        </a-cone>
+
+        <!-- right part -->
+        <a-entity id="right_part" fall_on_click>
+          <!-- <a-box color="blue" width="10" height="2"> </a-box> -->
+
+          <a-cone
+            id="cone"
+            position="1 1.45 0"
+            color="blue"
+            radius-bottom="0.2"
+            radius-top="0.01"
+          >
+          </a-cone>
+          <a-cylinder
+            id="cylinder_right"
+            position="1 0 0"
+            color="red"
+            radius="0.18"
+            height="2"
+          >
+          </a-cylinder>
+        </a-entity>
+      </a-entity>
+    </a-scene>
+  </body>
+</html>
